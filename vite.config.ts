@@ -18,6 +18,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
 
   build: {
+    emptyOutDir: false,
     lib: {
       entry: 'src/index.ts',
       name: 'CordLabUI',

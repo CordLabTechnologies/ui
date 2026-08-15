@@ -6,8 +6,19 @@
   "files": [
     "dist"
   ],
+  "main": "./dist/cordlab-ui.cjs",
+  "module": "./dist/cordlab-ui.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/cordlab-ui.js",
+      "require": "./dist/cordlab-ui.cjs"
+    },
+    "./styles.css": "./dist/cordlab-ui.css"
+  },
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "tsc && tsc -p tsconfig.build.json && vite build",
     "dev": "vite",
     "test": "vitest run --project=unit",
     "test:watch": "vitest --project=unit",
