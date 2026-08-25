@@ -1,0 +1,1 @@
+export { Button, type iButtonProps, type tButtonSize, type tButtonVariant } from './Button';
